@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ee55d6b2-40cb-40e7-9c6f-7c6c0c6471fc" name="Jo0kker" url="http://jo0kker.fr">
+        <fileTransfer host="jo0kker.fr" port="22" rootFolder="/var/www/html/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="230c673c-c49a-479f-b0e3-7d382863169a" name="fxserver" url="http://jo0kker.fr">
+        <fileTransfer host="jo0kker.fr" port="22" rootFolder="/home/fxserver/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="609417ec-8a3e-4a71-ab9f-cc9cee26872e" name="zap" url="http://92.42.45.80">
+        <fileTransfer host="92.42.45.80" port="21" rootFolder="/g110218/gta5-fivem">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
