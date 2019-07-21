@@ -1,0 +1,21 @@
+div.container {
+    margin-top: 20px;
+}
+
+div.ann-title {
+    padding: 2em;
+    background-size: cover;
+    background-position: center center;
+}
+div.ann-title h1, div.ann-title p {
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+div.carousel-caption {
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
+    color: whitesmoke !important;
+}
+div.carousel-caption h5 {
+    color: whitesmoke !important;
+}
