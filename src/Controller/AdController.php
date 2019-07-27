@@ -7,6 +7,8 @@ use App\Entity\Image;
 use App\Form\AnnonceType;
 use App\Repository\AdRepository;
 use Doctrine\Common\Persistence\ObjectManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
@@ -32,7 +34,7 @@ class AdController extends AbstractController
     /**
      * Permet de crée une annonce
      * @Route("/ads/new", name="ads_create")
-     *
+     * @IsGranted("ROLE_USER")
      * @return Response
      */
     public function create(Request $request, ObjectManager $manager)
@@ -71,7 +73,7 @@ class AdController extends AbstractController
     /**
      * Permet d'editer une annonce
      * @Route("/ads/{slug}/edit", name="ads_edit")
-     *
+     * @Security("is_granted('ROLE_USER') and user === ad.getAuthor()", message="Ce n'est pas votre annonce")
      * @return Response
      */
     public function edit(Ad $ad, Request $request, ObjectManager $manager)
@@ -114,5 +116,25 @@ class AdController extends AbstractController
     public function show(Ad $ad)
     {
         return $this->render('ad/show.html.twig', ['ad'=>$ad]);
+    }
+
+    /**
+     * Permet de supprimer une annonce
+     * @Route("/ad/{slug}/delete", name="ads_delete")
+     * @Security("is_granted('ROLE_USER') and user === ad.getAuthor()", message="Vous ne pouvez pas supprimer cette annonce")
+     * @param Ad $ad
+     * @param ObjectManager $manager
+     * @return Response
+     */
+    public function delete(Ad $ad, ObjectManager $manager)
+    {
+        $manager->remove($ad);
+        $manager->flush();
+
+        $this->addFlash(
+            'success',
+            "L'annonce <stong>{$ad->getTitle()}</stong> a bien été suprimée"
+        );
+        return $this->redirectToRoute("ads_index");
     }
 }
