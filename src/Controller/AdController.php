@@ -135,6 +135,6 @@ class AdController extends AbstractController
             'success',
             "L'annonce <stong>{$ad->getTitle()}</stong> a bien été suprimée"
         );
-        return $this->redirectToRoute("ads_index");
+        return $this->redirectToRoute('ads_index');
     }
 }

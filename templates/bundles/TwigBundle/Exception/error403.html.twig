@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Action non authorise{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Action interdite</h1>
+        <a href="{{ path('homepage') }}" class="btn btn-primary">Retour a l'acceuil</a>
+    </div>
+
+{% endblock %}

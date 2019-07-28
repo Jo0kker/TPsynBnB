@@ -29,14 +29,5 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="essentialmode" uuid="daf5282d-2cc6-4ab3-893f-f810be829c59">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:I:\wamp2\www\FXServer\essentialmode.db</jdbc-url>
-      <driver-properties>
-        <property name="enable_load_extension" value="true" />
-      </driver-properties>
-    </data-source>
   </component>
 </project>
