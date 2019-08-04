@@ -12,6 +12,12 @@ div.ann-title h1, div.ann-title p {
     text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
 }
 
+div.ad-title .btn {
+    margin-top: 2em;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
 div.carousel-caption {
     text-shadow: 5px 5px 5px rgba(0,0,0,0.5) !important;
     color: whitesmoke !important;
@@ -26,6 +32,10 @@ div.carousel-caption h5 {
     border-radius: 50%;
 }
 
+.avatar-micro {
+    max-width: 30px;
+    max-height: 30px;
+}
 .avatar-medium {
     max-height: 64px;
     max-width: 64px;
@@ -38,4 +48,16 @@ div.carousel-caption h5 {
 
 .datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
     color: firebrick !important;
+}
+
+span.rating i {
+    color: goldenrod;
+}
+
+.alert a {
+    text-decoration: none;
+}
+
+.alert .btn {
+    color: white;
 }

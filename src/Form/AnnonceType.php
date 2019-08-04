@@ -28,15 +28,7 @@ class AnnonceType extends ApplicationType
                     'Tapez un super titre'
                 ))
 
-            ->add(
-                'slug',
-                TextType::class,
-                $this->getConfiguration(
-                    'Adresse Web',
-                    'Tapez votre adresse web (automatique)', [
-                        'required'=>false
-                    ]
-                ))
+
             ->add(
                 'converImage',
                 UrlType::class,

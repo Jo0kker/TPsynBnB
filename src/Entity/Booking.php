@@ -34,7 +34,7 @@ class Booking
     /**
      * @ORM\Column(type="datetime")
      * @Assert\Date(message="Mauvais format de la date")
-     * @Assert\GreaterThan("today", message="Choix de date impossible")
+     * @Assert\GreaterThan("today", message="Choix de date impossible", groups={"front"})
      */
     private $startDate;
 
@@ -64,6 +64,7 @@ class Booking
 
     /**
      * @ORM\PrePersist()
+     * @ORM\PreUpdate()
      * @throws \Exception
      */
     public function prePersist()
