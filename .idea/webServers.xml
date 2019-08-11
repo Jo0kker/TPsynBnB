@@ -26,6 +26,14 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="8e9b9f45-fb4c-4590-88c3-6ad6875339a5" name="roma-s" url="https://roma-s.fr">
+        <fileTransfer host="roma-s.fr" port="31341" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="31341" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>
