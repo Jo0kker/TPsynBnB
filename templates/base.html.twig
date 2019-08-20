@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>SymBNB - {% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+        {{ encore_entry_link_tags('css/app') }}
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <script src="https://kit.fontawesome.com/2a21c6cec9.js"></script>
         {% block stylesheets %}{% endblock %}
@@ -14,9 +14,8 @@
 
         {% block body %}{% endblock %}
         {% include 'partials/footer.html.twig' %}
-        <script src="/js/jquery-3.3.1.slim.min.js"></script>
-        <script src="/js/popper.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        {% block javascripts %}{% endblock %}
+        {{ encore_entry_script_tags('js/app') }}
+        {% block javascripts %}
+        {% endblock %}
     </body>
 </html>

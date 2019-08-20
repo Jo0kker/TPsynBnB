@@ -1,3 +1,5 @@
-var $ = require('./jquery-3.3.1.slim.min.js');
-require('./popper.min.js');
+const $ = require('jquery');
+global.$ = global.jQuery = $;
+require('popper.js');
 require('./bootstrap.min.js');
+console.log('Hello Webpack Encore');
